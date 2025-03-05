@@ -5,6 +5,7 @@ interface Prompt {
   category: string;
   title: string;
   prompt: string;
+  reference: string;
 }
 
 interface PromptListProps {
@@ -21,6 +22,7 @@ export function PromptList({ prompts }: PromptListProps) {
           category={prompt.category}
           title={prompt.title}
           prompt={prompt.prompt}
+          reference={prompt.reference}
         />
       ))}
     </div>
