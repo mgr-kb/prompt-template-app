@@ -17,23 +17,23 @@ export function CopyButton({ text }: CopyButtonProps) {
     // イベント伝播を防止
     e.stopPropagation();
     e.preventDefault();
-    
+
     try {
       await navigator.clipboard.writeText(text);
       setIsCopied(true);
-      
+
       // toast({
       //   title: "コピーしました",
       //   description: "プロンプトがクリップボードにコピーされました",
       //   duration: 2000,
       // });
-      
+
       setTimeout(() => {
         setIsCopied(false);
       }, 2000);
     } catch (error) {
-      console.error('クリップボードへのコピーに失敗しました:', error);
-      
+      console.error("クリップボードへのコピーに失敗しました:", error);
+
       // toast({
       //   title: "コピーに失敗しました",
       //   description: "クリップボードへのアクセスが拒否されました",
@@ -44,9 +44,9 @@ export function CopyButton({ text }: CopyButtonProps) {
   };
 
   return (
-    <Button 
-      variant="outline" 
-      size="sm" 
+    <Button
+      variant="outline"
+      size="sm"
       onClick={handleCopy}
       className="h-8 gap-1"
     >

@@ -20,7 +20,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className="min-h-screen bg-background">
           <div className="container py-10 mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-10">プロンプトテンプレート</h1>
+            <h1 className="text-3xl font-bold text-center mb-10">
+              プロンプトテンプレート
+            </h1>
             {children}
           </div>
         </main>
