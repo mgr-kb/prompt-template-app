@@ -48,7 +48,7 @@ export function CopyButton({ text }: CopyButtonProps) {
       variant="outline"
       size="sm"
       onClick={handleCopy}
-      className="h-8 gap-1"
+      className="h-8 gap-1 cursor-pointer"
     >
       {isCopied ? (
         <>
