@@ -1,4 +1,4 @@
-import { PromptCard } from "@/components/prompt-card";
+import { PromptCard } from "@/app/(main)/_components/prompt-card";
 
 interface Prompt {
   id: string;

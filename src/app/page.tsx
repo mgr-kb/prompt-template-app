@@ -1,4 +1,4 @@
-import { PromptList } from "@/components/prompt-list";
+import { PromptList } from "@/app/(main)/_components/prompt-list";
 import promptsData from "@/data/prompts.json";
 
 export default function Home() {

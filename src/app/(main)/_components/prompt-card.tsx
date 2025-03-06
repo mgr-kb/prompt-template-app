@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { CopyButton } from "@/components/copy-button";
+import { CopyButton } from "@/app/(main)/_components/copy-button";
 import { Badge } from "@/components/ui/badge";
-import { PromptModal } from "@/components/prompt-modal";
+import { PromptModal } from "@/app/(main)/_components/prompt-modal";
 
 interface PromptCardProps {
   id: string;

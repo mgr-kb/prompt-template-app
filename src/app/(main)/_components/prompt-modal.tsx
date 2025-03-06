@@ -8,7 +8,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { CopyButton } from "@/components/copy-button";
+import { CopyButton } from "@/app/(main)/_components/copy-button";
 
 interface PromptModalProps {
   isOpen: boolean;
