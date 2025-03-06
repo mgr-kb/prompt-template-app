@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Copy } from "lucide-react";
-// import { useToast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 
 interface CopyButtonProps {
   text: string;
@@ -11,7 +11,6 @@ interface CopyButtonProps {
 
 export function CopyButton({ text }: CopyButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
-  // const { toast } = useToast();
 
   const handleCopy = async (e: React.MouseEvent) => {
     // イベント伝播を防止
@@ -22,11 +21,11 @@ export function CopyButton({ text }: CopyButtonProps) {
       await navigator.clipboard.writeText(text);
       setIsCopied(true);
 
-      // toast({
-      //   title: "コピーしました",
-      //   description: "プロンプトがクリップボードにコピーされました",
-      //   duration: 2000,
-      // });
+      toast.success("コピーしました", {
+        description: "プロンプトがクリップボードにコピーされました",
+        richColors: true,
+        duration: 2000,
+      });
 
       setTimeout(() => {
         setIsCopied(false);
@@ -34,12 +33,11 @@ export function CopyButton({ text }: CopyButtonProps) {
     } catch (error) {
       console.error("クリップボードへのコピーに失敗しました:", error);
 
-      // toast({
-      //   title: "コピーに失敗しました",
-      //   description: "クリップボードへのアクセスが拒否されました",
-      //   variant: "destructive",
-      //   duration: 3000,
-      // });
+      toast.warning("コピーに失敗しました", {
+        description: "クリップボードへのアクセスが拒否されました",
+        richColors: true,
+        duration: 2000,
+      });
     }
   };
 
